@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export const Heading = () => {
   return (
-    <div className="max-w-3xl space-y-4">
+    <div className="max-w-3xl space-y-3  items-center mt-30 justify-center">
       <h1 className="font-bold text-3xl md:text-6xl sm:text-5xl">
         Your ideas, documents, & plans. Unified. Welcome to{" "}
         <span className="underline">Notion</span>
