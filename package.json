@@ -25,6 +25,7 @@
     "react-dom": "^19.0.0",
     "shadcn": "^2.7.0",
     "shadcn-ui": "^0.9.5",
+    "sonner": "^2.0.6",
     "tailwind-merge": "^3.3.1",
     "usehooks-ts": "^3.1.1"
   },
