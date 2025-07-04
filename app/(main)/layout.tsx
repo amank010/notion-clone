@@ -15,9 +15,9 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     );
   }
 
-  //   if (!isAuthenticated) {
-  //     return redirect("/");
-  //   }
+  // if (!isAuthenticated) {
+  //   return redirect("/");
+  // }
 
   return (
     <div className="h-full flex dark:bg-[#1f1f1f]">

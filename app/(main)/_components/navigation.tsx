@@ -5,6 +5,7 @@ import { ChevronsLeft, MenuIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { ComponentRef, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
+import { UserItem } from "./user-item";
 
 export const Navigation = () => {
   const pathname = usePathname();
@@ -107,10 +108,7 @@ export const Navigation = () => {
           <ChevronsLeft />
         </div>
         <div>
-          <p>Action Items</p>
-        </div>
-        <div className="mt-4">
-          <p>Documents</p>
+          <UserItem />
         </div>
         <div
           onMouseDown={handleMouseDown}
