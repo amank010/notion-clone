@@ -15,8 +15,9 @@ import { UserItem } from "./user-item";
 import { Item } from "./item";
 
 import { toast } from "sonner";
-import { useMutation, useQuery } from "convex/react";
+import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { DocumentList } from "./document-list";
 
 export const Navigation = () => {
   const pathname = usePathname();
@@ -26,7 +27,6 @@ export const Navigation = () => {
   const isResizingRef = useRef(false);
   const sidebarRef = useRef<ComponentRef<"aside">>(null);
   const navbarRef = useRef<ComponentRef<"div">>(null);
-  const documents = useQuery(api.documents.get);
 
   const create = useMutation(api.documents.create);
 
@@ -139,9 +139,7 @@ export const Navigation = () => {
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
         <div>
-          {documents?.map((documents) => (
-            <p key={documents._id}>{documents.title}</p>
-          ))}
+          <DocumentList />
         </div>
         <div
           onMouseDown={handleMouseDown}
