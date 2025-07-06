@@ -4,9 +4,11 @@ import { cn } from "@/lib/utils";
 import {
   ChevronsLeft,
   MenuIcon,
+  Plus,
   PlusCircle,
   Search,
   Settings,
+  Trash,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { ComponentRef, useEffect, useRef, useState } from "react";
@@ -138,8 +140,9 @@ export const Navigation = () => {
           <Item onClick={() => {}} label="Settings" icon={Settings} />
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
-        <div>
+        <div className="mt-3">
           <DocumentList />
+          <Item onClick={handleCreate} label="Add a page" icon={Plus} />
         </div>
         <div
           onMouseDown={handleMouseDown}

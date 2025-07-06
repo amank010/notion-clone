@@ -53,7 +53,7 @@ export const DocumentList = ({
 
   return (
     <div>
-      <p
+      {/* <p
         style={{ paddingLeft: level ? `${level * 12 + 12}px` : undefined }}
         className={cn(
           "hidden  text-sm text-muted-foreground/80 font-medium",
@@ -62,7 +62,7 @@ export const DocumentList = ({
         )}
       >
         No pages inside
-      </p>
+      </p> */}
       {documents.map((document) => (
         <div key={document._id}>
           <Item
