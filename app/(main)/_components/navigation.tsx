@@ -24,6 +24,7 @@ import { Popover, PopoverTrigger } from "@/components/ui/popover";
 import { PopoverContent } from "@radix-ui/react-popover";
 import TrashBox from "./trash-box";
 import { useSearch } from "@/hooks/use-search";
+import { useSettings } from "@/hooks/use-settings";
 
 export const Navigation = () => {
   const search = useSearch();
@@ -34,6 +35,7 @@ export const Navigation = () => {
   const isResizingRef = useRef(false);
   const sidebarRef = useRef<ComponentRef<"aside">>(null);
   const navbarRef = useRef<ComponentRef<"div">>(null);
+  const settings = useSettings();
 
   const create = useMutation(api.documents.create);
 
@@ -142,7 +144,9 @@ export const Navigation = () => {
           <UserItem />
 
           <Item onClick={search.onOpen} label="Search" icon={Search} isSearch />
-          <Item onClick={() => {}} label="Settings" icon={Settings} />
+
+          <Item onClick={settings.onOpen} label="Settings" icon={Settings} />
+
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
         <div className="mt-3">
